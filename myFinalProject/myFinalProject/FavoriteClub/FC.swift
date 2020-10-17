@@ -12,10 +12,10 @@ struct FC: View {
         VStack{
             
             HStack{
-                Button(action: {}, label: {Text("النادي")})
-                
-                Button(action: {}, label: {Text("الاحصائيات")})
-                
+//                Button(action: {}, label: {Text("النادي")})
+//
+//                Button(action: {}, label: {Text("الاحصائيات")})
+
             }.padding(.top , 40)
             Spacer()
             VStack{
@@ -32,28 +32,41 @@ struct FC: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
                 Image("phone")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
                 Image("email")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
             }
             HStack{
                 Image("instagram")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
                 Image("twitter")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
+                
                 Image("facebook copy")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 70)
+                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                    .padding()
             }
             
             Spacer()
@@ -85,6 +98,11 @@ struct FC: View {
 
 struct FC_Previews: PreviewProvider {
     static var previews: some View {
-        FC()
+        Group {
+            FC()
+                .preferredColorScheme(.dark)
+            FC()
+                
+        }
     }
 }

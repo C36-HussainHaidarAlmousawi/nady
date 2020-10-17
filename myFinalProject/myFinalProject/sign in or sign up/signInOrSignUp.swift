@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct signInOrSignUp: View {
-    
     var body: some View {
         NavigationView{
             VStack{
@@ -22,13 +21,14 @@ struct signInOrSignUp: View {
                             Text("تسجيل الدخول").font(.title).bold().accentColor(.white)
                         }
                         
-                    }.padding(.bottom , 20)
+                    }.shadow(color: Color("Shadow2"), radius: 15, x: 8, y: 8)
+                    .padding(.bottom , 20)
                         ZStack{
                             Image("SignIn")
                             NavigationLink(destination: SignUp()) {
                                 Text("انشئ حساب").font(.title).bold().accentColor(.white)
                             }
-                        }
+                        }.shadow(color: Color("Shadow") , radius: 15, x: 8, y: 8)
                     }
                 }
             }

@@ -10,7 +10,7 @@ import SwiftUI
 struct SignIn: View {
     @State var email = ""
     @State var password = ""
-
+    
     var body: some View {
         VStack{
             Logo()
@@ -21,26 +21,26 @@ struct SignIn: View {
                 .padding(.bottom)
                 .multilineTextAlignment(TextAlignment.trailing)
                 .padding(.trailing)
-
-            TextField("كلمة السر", text: $password)
+            SecureField("كلمة السر", text: $password)
                 .padding(.top)
                 .multilineTextAlignment(TextAlignment.trailing)
                 .padding(.trailing)
+                
             Spacer()
             HStack{
                 Text("تسجيل دخول").bold()
-        ZStack{
-            Image("SignInn")
-        NavigationLink(destination: calenderCalender()){
-            Text("hiiiiii\n").accentColor(.clear)
-        }
-        }
+                ZStack{
+                    Image("SignInn")
+                    NavigationLink(destination: calenderCalender()){
+                        Text("hiiiiii\n").accentColor(.clear)
+                    }
+                }.shadow(color: Color("Shadow2"), radius: 10, x: 0, y: 0)
             }.padding(.leading , 250)
-        Image("SignInWith")
-        
-        NavigationLink(destination: SignIn()){
-            Text("ليس لديك حساب؟ اضغط هنا")
-        }
+            Image("SignInWith")
+            
+            NavigationLink(destination: SignIn()){
+                Text("ليس لديك حساب؟ اضغط هنا")
+            }
         }
     }
 }

@@ -63,6 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971D5268253B35E600789291 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		97690E112539F767004B02CF /* models2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +106,8 @@
 		97E41802253768A30004C292 /* myFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				971D5268253B35E600789291 /* Shop */,
 				97E4182025376FBA0004C292 /* More */,
-				97E4181F25376FB00004C292 /* Shop */,
 				97E4181E25376F9A0004C292 /* FavoriteClub */,
 				97E4181D25376F8C0004C292 /* Standings */,
 				97E4181C25376F850004C292 /* Calender */,
@@ -174,13 +181,6 @@
 				97ECB604253A426F00CA2D89 /* Status.swift */,
 			);
 			path = FavoriteClub;
-			sourceTree = "<group>";
-		};
-		97E4181F25376FB00004C292 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shop;
 			sourceTree = "<group>";
 		};
 		97E4182025376FBA0004C292 /* More */ = {
