@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97053EB325378CFB00E6B4CC /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97053EB225378CFB00E6B4CC /* SignIn.swift */; };
+		972564AD253E7E3A00807BC5 /* CalenderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972564AC253E7E3A00807BC5 /* CalenderAPI.swift */; };
 		97690E052539E58D004B02CF /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E042539E58D004B02CF /* Shots.swift */; };
 		97690E082539F395004B02CF /* passes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E072539F395004B02CF /* passes.swift */; };
 		97690E0B2539F3A8004B02CF /* assistes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E0A2539F3A8004B02CF /* assistes.swift */; };
@@ -17,6 +18,7 @@
 		976E5B822539D79900490E8C /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976E5B812539D79900490E8C /* player.swift */; };
 		9783128325389195006FBCD6 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783128225389195006FBCD6 /* game.swift */; };
 		978312872538926D006FBCD6 /* GamedetailsVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978312862538926D006FBCD6 /* GamedetailsVew.swift */; };
+		97AB9035253BBE41005EAB66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */; };
 		97E41804253768A30004C292 /* myFinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E41803253768A30004C292 /* myFinalProjectApp.swift */; };
 		97E41808253768A70004C292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E41807253768A70004C292 /* Assets.xcassets */; };
 		97E4180B253768A70004C292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E4180A253768A70004C292 /* Preview Assets.xcassets */; };
@@ -30,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		97053EB225378CFB00E6B4CC /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		972564AC253E7E3A00807BC5 /* CalenderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderAPI.swift; sourceTree = "<group>"; };
 		97690E042539E58D004B02CF /* Shots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
 		97690E072539F395004B02CF /* passes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passes.swift; sourceTree = "<group>"; };
 		97690E0A2539F3A8004B02CF /* assistes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assistes.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		976E5B812539D79900490E8C /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		9783128225389195006FBCD6 /* game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		978312862538926D006FBCD6 /* GamedetailsVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamedetailsVew.swift; sourceTree = "<group>"; };
+		97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97E41800253768A30004C292 /* myFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E41803253768A30004C292 /* myFinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFinalProjectApp.swift; sourceTree = "<group>"; };
 		97E41807253768A70004C292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		97E41802253768A30004C292 /* myFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */,
 				971D5268253B35E600789291 /* Shop */,
 				97E4182025376FBA0004C292 /* More */,
 				97E4181E25376F9A0004C292 /* FavoriteClub */,
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				97F0161925385E4A00CBDFCB /* calenderCalender.swift */,
+				972564AC253E7E3A00807BC5 /* CalenderAPI.swift */,
 			);
 			path = calender;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			files = (
 				97E4180B253768A70004C292 /* Preview Assets.xcassets in Resources */,
 				97E41808253768A70004C292 /* Assets.xcassets in Resources */,
+				97AB9035253BBE41005EAB66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 				97690E082539F395004B02CF /* passes.swift in Sources */,
 				976E5B822539D79900490E8C /* player.swift in Sources */,
 				97690E052539E58D004B02CF /* Shots.swift in Sources */,
+				972564AD253E7E3A00807BC5 /* CalenderAPI.swift in Sources */,
 				97ECB5FC253A3C7F00CA2D89 /* FC.swift in Sources */,
 				97F0161A25385E4A00CBDFCB /* calenderCalender.swift in Sources */,
 				9783128325389195006FBCD6 /* game.swift in Sources */,
@@ -433,7 +441,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hussain.myFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hussain.nady;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hussain.myFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hussain.nady;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

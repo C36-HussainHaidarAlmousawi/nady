@@ -38,7 +38,7 @@ struct SignIn: View {
             }.padding(.leading , 250)
             Image("SignInWith")
             
-            NavigationLink(destination: SignIn()){
+            NavigationLink(destination: SignUp()){
                 Text("ليس لديك حساب؟ اضغط هنا")
             }
         }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>343531176904-fj2c1h4merucc64kijahdkaka5jbis93.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.343531176904-fj2c1h4merucc64kijahdkaka5jbis93</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBeiRaLe9pWEaxLfLuDNRv7qG6neibmEQg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>343531176904</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hussain.nady</string>
+	<key>PROJECT_ID</key>
+	<string>nady-ea1ed</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nady-ea1ed.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:343531176904:ios:cc27ce09cf58175bae76fd</string>
+	<key>DATABASE_URL</key>
+	<string>https://nady-ea1ed.firebaseio.com</string>
+</dict>
+</plist>
