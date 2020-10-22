@@ -6,20 +6,44 @@
 //
 import SwiftUI
 
+
+
+var text: Text!
 struct calenderCalender: View {
     
-  //  @State var game: [Gameee]
+    @State var games: [Gameee] = []
+    var gamess = ["1","2"]
+    
     var body: some View {
-       
-        
+        NavigationView{
+            
             VStack{
+                
 
-              //  Button("refresh") {loadData()}
                 Form{
-                    Text("game[0].HG ?? ")
+                    
+                    ForEach(games) {item in
+                        HStack{
+                        Image(uiImage: UIImage(named: item.HN)!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 70)
+                            Text(item.HG).bold()
+                            VStack{
+                                Text("")
+                                Text(item.MS).font(.title)
+                                Text(item.MD)
+                                Text("")
+                            }
+                            Text(item.AG).bold()
+                            Image(uiImage: UIImage(named: item.AN)!)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 70)
+                        }
+                    }
                 }
-
-               
+                
                 
                 HStack{
                     VStack{
@@ -49,7 +73,7 @@ struct calenderCalender: View {
                                 .scaledToFit()
                                 .frame(height: 55)
                                 .clipShape(Circle())
-                            Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                            Image(uiImage: #imageLiteral(resourceName: "Al Arabi"))
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 50)
@@ -79,30 +103,52 @@ struct calenderCalender: View {
                     }.padding(.leading)
                     
                 }
+            }.onAppear{
+                print("onAppear")
+                loadData()
             }
+        }
+        .navigationBarHidden(true)
     }
-//        }.onAppear {
-//            loadData()
-//        }
-    }
-
-struct calenderCalender_Previews: PreviewProvider {
-    static var previews: some View {
-
-        calenderCalender()
-
+    func loadData(){
+        
+        
+        var arrayGame : [Gameee] = []
+        
+        guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_predictions&from=0000-00-00&to=3020-10-20&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
+        else { return }
+        
+        URLSession.shared.dataTask(with: url){(data , response, error) in
+            do{
+                guard let data = data else { return }
+                
+                if let decodedData = try? JSONDecoder().decode([Gameee].self, from: data) {
+                    
+                    DispatchQueue.main.async {
+                        
+                        for i in decodedData{
+                        arrayGame.append(Gameee(MD: i.MD, MS: i.MS, MT: i.MT, HG: i.HG, AG: i.AG, HN: i.HN, AN: i.AN))
+                        games = arrayGame
+                        }
+                    }
+                }
+            }
+            
+        }.resume()
+        
     }
 }
-
-struct Gameee: Codable {
-    public var MD: String
-    public var MS: String
-    public var MT: String
-    public var HG: String
-    public var AG: String
-    public var HN: String
-    public var AN: String
-
+struct Gameee: Codable,Identifiable {
+    
+    var id = UUID()
+    var MD: String
+    var MS: String
+    var MT: String
+    var HG: String
+    var AG: String
+    var HN: String
+    var AN: String
+    
     enum CodingKeys: String, CodingKey{
         case MD = "match_date"
         case HG = "match_hometeam_score"
@@ -111,42 +157,14 @@ struct Gameee: Codable {
         case AG = "match_awayteam_score"
         case HN = "match_hometeam_name"
         case AN = "match_awayteam_name"
-
+        
     }
 }
 
 
-func loadData(){
-    print("hi")
-    guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_predictions&from=0000-00-00&to=3000-12-31&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
-    else { return }
 
-    URLSession.shared.dataTask(with: url){(data , response, error) in
-        do{
-            guard let data = data else { return }
-            print("hi2")
-            if let decodedData = try? JSONDecoder().decode([Gameee].self, from: data) {
-                DispatchQueue.main.async {
-                    for i in decodedData{
-                    let gam = Gameee(MD: i.MD, MS: i.MS, MT: i.MT, HG: i.HG, AG: i.AG, HN: i.HN, AN: i.AN)
-//                    calenderCalender.init(game: gam)
-//                        game.append(gam)
-                    }
-                }
-            }
-        }
-        catch{
-            print("error")
-        }
-    }.resume()
-
-}
-
-struct GGGG {
-    var hussain = [Gameee].self
-
-    enum CodingKeys: String, CodingKey{
-
-       case husaain = ""
+struct calenderCalender_Previews: PreviewProvider {
+    static var previews: some View {
+        calenderCalender()
     }
 }
