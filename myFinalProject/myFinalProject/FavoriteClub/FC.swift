@@ -71,24 +71,9 @@ struct FC: View {
             }
             
             Spacer()
-            VStack{
-                ZStack{
-                    Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 55)
-                        .clipShape(Circle())
-                    Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 50)
-                        .clipShape(Circle())
-                }
-                NavigationLink(destination: FC()){
-                    Text("العربي").accentColor(Color("Shadow2"))
-                }
-            }
+
             HStack{
+
                 VStack{
                     Image(uiImage: #imageLiteral(resourceName: "calendar"))
                         .resizable()
@@ -109,7 +94,23 @@ struct FC: View {
                         Text("الترتيب").accentColor(Color("Color"))
                     }
                 }.padding(.trailing , 20)
-                
+                VStack{
+                    ZStack{
+                        Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 55)
+                            .clipShape(Circle())
+                        Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 50)
+                            .clipShape(Circle())
+                    }
+                    NavigationLink(destination: FC()){
+                        Text("العربي").accentColor(Color("Shadow2"))
+                    }
+                }.padding(.bottom, 50)
                 VStack{
                     Image(uiImage: #imageLiteral(resourceName: "shop"))
                         .resizable()
@@ -130,7 +131,6 @@ struct FC: View {
                 }.padding(.leading)
                 
             }
-//                .padding(.bottom , 75)
         }
     }
 }

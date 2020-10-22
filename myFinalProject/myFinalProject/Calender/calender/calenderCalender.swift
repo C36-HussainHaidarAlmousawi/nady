@@ -19,23 +19,7 @@ struct calenderCalender: View {
                     Text("game[0].HG ?? ")
                 }
 
-                VStack{
-                    ZStack{
-                    Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 55)
-                        .clipShape(Circle())
-                    Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 50)
-                        .clipShape(Circle())
-                    }
-                    NavigationLink(destination: FC()){
-                        Text("العربي").accentColor(Color("Color"))
-                            
-                    }
+               
                 
                 HStack{
                     VStack{
@@ -56,9 +40,25 @@ struct calenderCalender: View {
                             .shadow(color: Color("Color"), radius: 6, x: 0.0, y: 0.0)
                         NavigationLink(destination: Standings()){
                             Text("الترتيب").accentColor(Color("Color"))
+                        }
+                    }.padding(.trailing , 20)
+                    VStack{
+                        ZStack{
+                            Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 55)
+                                .clipShape(Circle())
+                            Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 50)
+                                .clipShape(Circle())
+                        }
+                        NavigationLink(destination: FC()){
+                            Text("العربي").accentColor(Color("Color"))
                         }.navigationBarHidden(true)
-                    }.padding(.trailing , 40)
-                    
+                    }.padding(.bottom, 50)
                     VStack{
                         Image(uiImage: #imageLiteral(resourceName: "shop"))
                             .resizable()
@@ -66,7 +66,7 @@ struct calenderCalender: View {
                             .frame(height: 50)
                             .shadow(color: Color("Color"), radius: 6, x: 0.0, y: 0.0)
                         Text("قريبا").accentColor(Color("Color"))
-                    }.padding(.leading , 40)
+                    }.padding(.leading , 20)
                     VStack{
                         Image(uiImage: #imageLiteral(resourceName: "more"))
                             .resizable()
@@ -78,7 +78,6 @@ struct calenderCalender: View {
                         }
                     }.padding(.leading)
                     
-                
                 }
             }
     }
@@ -86,7 +85,7 @@ struct calenderCalender: View {
 //            loadData()
 //        }
     }
-}
+
 struct calenderCalender_Previews: PreviewProvider {
     static var previews: some View {
 

@@ -18,23 +18,6 @@ struct More: View {
                     Button(action: {}, label: {Text("رقم الهاتف")})
    
                 }
-                VStack{
-                    ZStack{
-                        Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 55)
-                            .clipShape(Circle())
-                        Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 50)
-                            .clipShape(Circle())
-                    }
-                    NavigationLink(destination: FC()){
-                        Text("العربي").accentColor(Color("Color"))
-                    }.navigationBarHidden(true)
-                }
                 HStack{
                     VStack{
                         Image(uiImage: #imageLiteral(resourceName: "calendar"))
@@ -56,7 +39,23 @@ struct More: View {
                             Text("الترتيب").accentColor(Color("Color"))
                         }
                     }.padding(.trailing , 20)
-                    
+                    VStack{
+                        ZStack{
+                            Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 55)
+                                .clipShape(Circle())
+                            Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 50)
+                                .clipShape(Circle())
+                        }
+                        NavigationLink(destination: FC()){
+                            Text("العربي").accentColor(Color("Color"))
+                        }.navigationBarHidden(true)
+                    }.padding(.bottom, 50)
                     VStack{
                         Image(uiImage: #imageLiteral(resourceName: "shop"))
                             .resizable()

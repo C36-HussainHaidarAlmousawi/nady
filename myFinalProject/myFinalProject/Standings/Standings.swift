@@ -30,23 +30,7 @@ struct Standings: View {
 //                    Stand(T: teams[3])
                 }
             }
-            VStack{
-                ZStack{
-                Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 55)
-                    .clipShape(Circle())
-                Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 50)
-                    .clipShape(Circle())
-                }
-                NavigationLink(destination: FC()){
-                    Text("العربي").accentColor(Color("Color"))
-                }
-            }
+           
             HStack{
                 VStack{
                     Image(uiImage: #imageLiteral(resourceName: "calendar"))
@@ -68,7 +52,23 @@ struct Standings: View {
                         Text("الترتيب").accentColor(Color("Shadow2"))
                     }
                 }.padding(.trailing , 20)
-                
+                VStack{
+                    ZStack{
+                        Image(uiImage: #imageLiteral(resourceName: "SignUpp"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 55)
+                            .clipShape(Circle())
+                        Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 50)
+                            .clipShape(Circle())
+                    }
+                    NavigationLink(destination: FC()){
+                        Text("العربي").accentColor(Color("Color"))
+                    }
+                }.padding(.bottom, 50)
                 VStack{
                     Image(uiImage: #imageLiteral(resourceName: "shop"))
                         .resizable()
