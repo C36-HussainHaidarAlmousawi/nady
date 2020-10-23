@@ -46,7 +46,7 @@ struct More: View {
                                 .scaledToFit()
                                 .frame(height: 55)
                                 .clipShape(Circle())
-                            Image(uiImage: #imageLiteral(resourceName: "Alarabi"))
+                            Image(uiImage: #imageLiteral(resourceName: "Al Arabi"))
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 50)

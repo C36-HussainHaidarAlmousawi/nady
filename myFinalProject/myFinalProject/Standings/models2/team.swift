@@ -7,24 +7,57 @@
 
 import Foundation
 
-struct Teamm {
-    var Stand: Int
-    var TImg: String
-    var TName: String
-    var Points: Int
-    var GP: Int
-    var W: Int
-    var D: Int
-    var L: Int
+struct Team: Codable, Identifiable {
+    var id = UUID()
+    var TN: String
+    var S: String
+    var MP: String
+    var W: String
+    var D: String
+    var L: String
+    var PTS: String
+
+    enum CodingKeyss: String, CodingKey{
+        case TN = "team_name"
+        case S = "overall_league_position"
+        case MP = "overall_league_played"
+        case W = "overall_league_W"
+        case D = "overall_league_D"
+        case L = "overall_league_L"
+        case PTS = "overall_league_PTS"
+
+    }
 }
-
-
-var T1 = Teamm(Stand: 1, TImg: "Alarabi", TName: "العربي", Points: 15, GP: 5, W: 5, D: 0, L: 0)
-var T2 = Teamm(Stand: 2, TImg: "Alarabi", TName: "العربي", Points: 13, GP: 5, W: 4, D: 1, L: 0)
-var T3 = Teamm(Stand: 3, TImg: "Alarabi", TName: "العربي", Points: 7, GP: 5, W: 3, D: 1, L: 1)
-var T4 = Teamm(Stand: 4, TImg: "Alarabi", TName: "العربي", Points: 6, GP: 5, W: 2, D: 0, L: 3)
+/*
 
 
 
-
-var teams = [T1 , T2 , T3 , T4]
+"overall_league_position": "1",
+"overall_league_payed": "2",
+"overall_league_W": "2",
+"overall_league_D": "0",
+"overall_league_L": "0",
+"overall_league_GF": "6",
+"overall_league_GA": "2",
+"overall_league_PTS": "6",
+"home_league_position": "3",
+"home_promotion": "",
+"home_league_payed": "1",
+"home_league_W": "1",
+"home_league_D": "0",
+"home_league_L": "0",
+"home_league_GF": "3",
+"home_league_GA": "2",
+"home_league_PTS": "3",
+"away_league_position": "2",
+"away_promotion": "",
+"away_league_payed": "1",
+"away_league_W": "1",
+"away_league_D": "0",
+"away_league_L": "0",
+"away_league_GF": "3",
+"away_league_GA": "0",
+"away_league_PTS": "3",
+"league_round": "",
+"team_badge": "https://apiv2.apifootball.com/badges/4506_al-qadisiya.png"
+*/

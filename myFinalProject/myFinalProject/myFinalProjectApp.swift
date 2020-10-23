@@ -11,7 +11,7 @@ import SwiftUI
 struct myFinalProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            calenderCalender()
+            Standings()
         }
     }
 }

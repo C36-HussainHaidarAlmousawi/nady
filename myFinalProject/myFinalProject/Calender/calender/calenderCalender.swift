@@ -29,12 +29,15 @@ struct calenderCalender: View {
                             .scaledToFit()
                             .frame(height: 70)
                             Text(item.HG).bold()
+                            Spacer()
                             VStack{
                                 Text("")
                                 Text(item.MS).font(.title)
                                 Text(item.MD)
+                                Text(item.MT)
                                 Text("")
                             }
+                            Spacer()
                             Text(item.AG).bold()
                             Image(uiImage: UIImage(named: item.AN)!)
                                 .resizable()
@@ -104,12 +107,13 @@ struct calenderCalender: View {
                     
                 }
             }.onAppear{
-                print("onAppear")
+               
                 loadData()
             }
         }
         .navigationBarHidden(true)
     }
+    
     func loadData(){
         
         
@@ -123,43 +127,22 @@ struct calenderCalender: View {
                 guard let data = data else { return }
                 
                 if let decodedData = try? JSONDecoder().decode([Gameee].self, from: data) {
-                    
+                    print("as")
                     DispatchQueue.main.async {
                         
                         for i in decodedData{
                         arrayGame.append(Gameee(MD: i.MD, MS: i.MS, MT: i.MT, HG: i.HG, AG: i.AG, HN: i.HN, AN: i.AN))
                         games = arrayGame
+                            
                         }
                     }
                 }
             }
-            
         }.resume()
-        
     }
 }
-struct Gameee: Codable,Identifiable {
-    
-    var id = UUID()
-    var MD: String
-    var MS: String
-    var MT: String
-    var HG: String
-    var AG: String
-    var HN: String
-    var AN: String
-    
-    enum CodingKeys: String, CodingKey{
-        case MD = "match_date"
-        case HG = "match_hometeam_score"
-        case MS = "match_status"
-        case MT = "match_time"
-        case AG = "match_awayteam_score"
-        case HN = "match_hometeam_name"
-        case AN = "match_awayteam_name"
-        
-    }
-}
+
+
 
 
 
