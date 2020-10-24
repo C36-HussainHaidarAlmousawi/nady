@@ -127,7 +127,7 @@ struct calenderCalender: View {
                 guard let data = data else { return }
                 
                 if let decodedData = try? JSONDecoder().decode([Gameee].self, from: data) {
-                    print("as")
+                    
                     DispatchQueue.main.async {
                         
                         for i in decodedData{

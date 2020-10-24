@@ -110,7 +110,6 @@
 		97E41802253768A30004C292 /* myFinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */,
 				971D5268253B35E600789291 /* Shop */,
 				97E4182025376FBA0004C292 /* More */,
 				97E4181E25376F9A0004C292 /* FavoriteClub */,
@@ -122,6 +121,7 @@
 				97E41803253768A30004C292 /* myFinalProjectApp.swift */,
 				97E41807253768A70004C292 /* Assets.xcassets */,
 				97E4180C253768A70004C292 /* Info.plist */,
+				97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */,
 				97E41809253768A70004C292 /* Preview Content */,
 			);
 			path = myFinalProject;

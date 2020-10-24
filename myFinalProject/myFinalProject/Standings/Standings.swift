@@ -28,10 +28,13 @@ struct Standings: View {
                 ForEach(games) {item in
                     HStack{
                         Text("\(item.S).")
-                    Image(uiImage: UIImage(named: item.TN)!)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 70)
+                        Image(uiImage: UIImage(named: item.TN)!)
+                        Spacer()
+                        Text(item.PTS)
+                        Text(item.MP)
+                        Text(item.W)
+                        Text(item.D)
+                        Text(item.L)
                     }
                 }
             }
@@ -96,70 +99,36 @@ struct Standings: View {
                     }
                 }
         }.onAppear{
-            loadData()
+            loadTeamData()
             print("on appear")
 
         }
         }.navigationBarHidden(true)
     }
    
-//    func loadTeamData(){
-//
-//        var arrayTeam : [Team] = []
-//
-//        guard let urll = URL(string:"https://apiv2.apifootball.com/?action=get_standings&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
-//        else { return }
-//
-//        URLSession.shared.dataTask(with: urll){(dataa , response, error) in
-//            do{
-//
-//                guard let dataa = dataa else { return }
-//                print("hussain")
-//                if let decodedData = try? JSONDecoder().decode([Team].self, from: dataa) {
-//
-//                    DispatchQueue.main.async {
-//
-//                        for a in decodedData{
-//                            arrayTeam.append(Team(TN: a.TN, S: a.S, MP: a.MP, W: a.W, D: a.D, L: a.L, PTS: a.PTS))
-//                            print("hi")
-//                        teams = arrayTeam
-//                        }
-//                    }
-//                } else {
-//                    print("error")
-//                }
-//            }
-//
-//        }.resume()
-//    }
-//}
+    func loadTeamData() {
+        var arrayTeam: [Team] = []
 
-func loadData(){
+        guard let url = URL(string: "https://apiv2.apifootball.com/?action=get_standings&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
+        else { return }
 
-
-    var arrayGame : [Team] = []
-
-    guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_standings&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
-    else { return }
-    
-    URLSession.shared.dataTask(with: url){(data , response, error) in
-        do{
-            guard let data = data else { return }
-
-            if let decodedData = try? JSONDecoder().decode([Team].self, from: data) {
-                print("as")
-                DispatchQueue.main.async {
-                    for i in decodedData{
-                    arrayGame.append(Team(TN: i.TN, S: i.S, MP: i.MP, W: i.W, D: i.D, L: i.L, PTS: i.PTS))
-                    games = arrayGame
+        URLSession.shared.dataTask(with: url){(data , response , error)  in
+            do{
+                guard let data = data else { return }
+                if let decodedData = try? JSONDecoder().decode([Team].self, from: data) {
+                    DispatchQueue.main.async {
+                        for i in decodedData {
+                            arrayTeam.append(Team(TN: i.TN, S: i.S, MP: i.MP, W: i.W, D: i.D, L: i.L, PTS: i.PTS))
+                            games = arrayTeam
+                        }
                     }
+                } else {
+                    print("errorrrrrrrrrrrrr")
                 }
-            } else {
-                print("error")
             }
-        }
-    }.resume()
-}
+
+        }.resume()
+    }
 }
 
 

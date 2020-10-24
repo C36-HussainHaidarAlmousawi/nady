@@ -19,7 +19,7 @@ struct FC: View {
             }.padding(.top , 40)
             Spacer()
             VStack{
-                Image("Alarabi")
+                Image(uiImage: #imageLiteral(resourceName: "Al Arabi"))
                 Text("العربي").font(.title).bold()
             }
             
