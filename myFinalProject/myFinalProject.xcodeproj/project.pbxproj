@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		97053EB325378CFB00E6B4CC /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97053EB225378CFB00E6B4CC /* SignIn.swift */; };
 		972564AD253E7E3A00807BC5 /* CalenderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972564AC253E7E3A00807BC5 /* CalenderAPI.swift */; };
+		973E32F72544AEFA00A74DDF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973E32F62544AEFA00A74DDF /* Launch Screen.storyboard */; };
 		97690E052539E58D004B02CF /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E042539E58D004B02CF /* Shots.swift */; };
 		97690E082539F395004B02CF /* passes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E072539F395004B02CF /* passes.swift */; };
 		97690E0B2539F3A8004B02CF /* assistes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97690E0A2539F3A8004B02CF /* assistes.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		97053EB225378CFB00E6B4CC /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		972564AC253E7E3A00807BC5 /* CalenderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderAPI.swift; sourceTree = "<group>"; };
+		973E32F62544AEFA00A74DDF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		97690E042539E58D004B02CF /* Shots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
 		97690E072539F395004B02CF /* passes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passes.swift; sourceTree = "<group>"; };
 		97690E0A2539F3A8004B02CF /* assistes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assistes.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				97E41807253768A70004C292 /* Assets.xcassets */,
 				97E4180C253768A70004C292 /* Info.plist */,
 				97E41809253768A70004C292 /* Preview Content */,
+				973E32F62544AEFA00A74DDF /* Launch Screen.storyboard */,
 			);
 			path = myFinalProject;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973E32F72544AEFA00A74DDF /* Launch Screen.storyboard in Resources */,
 				97E4180B253768A70004C292 /* Preview Assets.xcassets in Resources */,
 				97E41808253768A70004C292 /* Assets.xcassets in Resources */,
 			);

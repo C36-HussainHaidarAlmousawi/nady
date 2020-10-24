@@ -49,7 +49,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
                     }
                     .alert(isPresented: $showingAlert) {
-                        Alert(title: Text("Im sorry"), message: Text("you can visit the website by typing al arabi FC in google"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("You can visit the website by typing al arabi FC in google"), dismissButton: .default(Text("Got it!")))
                     }
                     .accentColor(.clear)
                 }
@@ -66,7 +66,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
                     }
                     .alert(isPresented: $showingAlerto) {
-                        Alert(title: Text("Im sorry"), message: Text("i dont know the number of alarabi FC"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("I don't know the number of alarabi FC"), dismissButton: .default(Text("Got it!")))
                     }
                     .accentColor(.clear)
                 }
@@ -83,7 +83,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
                     }
                     .alert(isPresented: $showingAlertt) {
-                        Alert(title: Text("Im sorry"), message: Text("i dont know alarabi's FC email"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("I don't know alarabi's FC email"), dismissButton: .default(Text("Got it!")))
                     }
                     .accentColor(.clear)
                 }
@@ -102,7 +102,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
                     }
                     .alert(isPresented: $showingAlertth) {
-                        Alert(title: Text("Im sorry"), message: Text("you can visit the instagram acount of alarabi's FC by typing https://www.instagram.com/arabi_sc/?hl=en in google"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("You can visit the instagram acount of alarabi's FC by typing https://www.instagram.com/arabi_sc/?hl=en in google"), dismissButton: .default(Text("Got it!")))
                     }.accentColor(.clear)
                    
                 }
@@ -119,7 +119,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
                     }
                     .alert(isPresented: $showingAlertf) {
-                        Alert(title: Text("Im sorry"), message: Text("you can visit the twitter acount of alarabi's FC by typing https://twitter.com/Alarabi_SC in google"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("You can visit the twitter acount of alarabi's FC by typing https://twitter.com/Alarabi_SC in google"), dismissButton: .default(Text("Got it!")))
                     }
                     .accentColor(.clear)
                 }
@@ -136,7 +136,7 @@ struct FC: View {
                         Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n").accentColor(.clear)
                     }
                     .alert(isPresented: $showingAlertfi) {
-                        Alert(title: Text("Im sorry"), message: Text("you can visit the facebook acount of alarabi's FC by typing https://www.facebook.com/alarabiclub/ in google"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("I'm sorry"), message: Text("You can visit the facebook acount of alarabi's FC by typing https://www.facebook.com/alarabiclub/ in google"), dismissButton: .default(Text("Got it!")))
                     }
                 }
             }

@@ -127,7 +127,7 @@ struct Standings: View {
             }
         }.onAppear{
             loadTeamData()
-            print("on appear")
+            
 
         }
         }.navigationBarHidden(true)
@@ -183,7 +183,7 @@ struct Loader: View {
                 .rotationEffect(.init(degrees: self.isAnimated ? 360 : 0))
                 .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
             .position(x: 200.0, y: 300.0)
-            Text("plese wait.......").bold()
+            Text("يرجى الانتظار...").bold()
                 .position(x: 210.0, y: 100.0)
                 .font(.title)
                 
