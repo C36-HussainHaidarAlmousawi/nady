@@ -10,16 +10,24 @@ import SwiftUI
 
 var text: Text!
 struct calenderCalender: View {
+    @State var isShowed = true
     
     @State var games: [Gameee] = []
     var gamess = ["1","2"]
     
     var body: some View {
+        
         NavigationView{
             
             VStack{
-                
+                if self.isShowed {
+                    GeometryReader{_ in
+                        Loader()
+                        
+                    }
+                }
 
+                if !self.isShowed {
                 Form{
                     
                     ForEach(games) {item in
@@ -106,6 +114,7 @@ struct calenderCalender: View {
                     }.padding(.leading)
                     
                 }
+                }
             }.onAppear{
                
                 loadData()
@@ -119,7 +128,7 @@ struct calenderCalender: View {
         
         var arrayGame : [Gameee] = []
         
-        guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_predictions&from=0000-00-00&to=3020-10-20&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
+        guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_predictions&from=2000-00-00&to=3020-10-24&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
         else { return }
         
         URLSession.shared.dataTask(with: url){(data , response, error) in
@@ -129,7 +138,7 @@ struct calenderCalender: View {
                 if let decodedData = try? JSONDecoder().decode([Gameee].self, from: data) {
                     
                     DispatchQueue.main.async {
-                        
+                        self.isShowed = false
                         for i in decodedData{
                         arrayGame.append(Gameee(MD: i.MD, MS: i.MS, MT: i.MT, HG: i.HG, AG: i.AG, HN: i.HN, AN: i.AN))
                         games = arrayGame
@@ -149,5 +158,18 @@ struct calenderCalender: View {
 struct calenderCalender_Previews: PreviewProvider {
     static var previews: some View {
         calenderCalender()
+    }
+}
+
+struct ActivityIndicator: UIViewRepresentable {
+    @Binding var isAnimating: Bool
+    let style: UIActivityIndicatorView.Style
+
+    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView(style: style)
+    }
+
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+        isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
     }
 }

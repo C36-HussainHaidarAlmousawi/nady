@@ -10,29 +10,37 @@ import SwiftUI
 struct Standings: View {
     
     @State var teams: [Team] = []
-    
+    @State var isShowed = true
     var body: some View {
         NavigationView{
+            
+
         VStack{
-             
-            List{
-                    HStack{
-                        Group{
+            if self.isShowed {
+                GeometryReader{_ in
+                    Loader()
+                    
+                }
+            }
+            if !self.isShowed{
+            Form{
+                HStack{
+                    Group{
                         Text("الفريق")
                         Spacer()
                         Text("نقاط")
                         Spacer()
                         Text("لعب")
                         Spacer()
-                            Group{
-                        Text("ف")
-                        Spacer()
-                        Text("ت")
-                        Spacer()
-                        Text("خ")
+                        Group{
+                            Text("ف")
+                            Spacer()
+                            Text("ت")
+                            Spacer()
+                            Text("خ")
+                        }
                     }
-                    }
-                    }
+                }
                 ForEach(teams) {item in
                     HStack{
                         Text("\(item.S).")
@@ -116,6 +124,7 @@ struct Standings: View {
                         }.padding(.leading)
                     }
                 }
+            }
         }.onAppear{
             loadTeamData()
             print("on appear")
@@ -138,6 +147,7 @@ struct Standings: View {
             do {
                 let decodedData = try JSONDecoder().decode([Team].self, from: data)
                 DispatchQueue.main.async {
+                    self.isShowed = false
                     for i in decodedData {
                         arrayTeam.append(Team(TN: i.TN, S: i.S, MP: i.MP, W: i.W, D: i.D, L: i.L, PTS: i.PTS))
                         teams = arrayTeam
@@ -150,11 +160,37 @@ struct Standings: View {
             }
         }.resume()
     }
+    
 }
 
 
 struct Standings_Previews: PreviewProvider {
     static var previews: some View {
         Standings()
+    }
+}
+
+struct Loader: View {
+    @State var isAnimated = false
+    
+    var body: some View {
+        VStack{
+            Circle()
+                .trim(from: 0, to: 1)
+                .stroke(AngularGradient(gradient: .init(colors: [.red, .orange]), center: .center),
+                        style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                .frame(width: 100, height: 100)
+                .rotationEffect(.init(degrees: self.isAnimated ? 360 : 0))
+                .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
+            .position(x: 200.0, y: 300.0)
+            Text("plese wait.......").bold()
+                .position(x: 210.0, y: 100.0)
+                .font(.title)
+                
+        }
+        .onAppear{
+            self.isAnimated.toggle()
+        }
+        
     }
 }

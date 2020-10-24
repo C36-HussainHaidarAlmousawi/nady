@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct FC: View {
+    @State var showingAlert = false
+    @State var showingAlerto = false
+    @State var showingAlertt = false
+    @State var showingAlertth = false
+    @State var showingAlertf = false
+    @State var showingAlertfi = false
+
+
     var body: some View {
         VStack{
             
             HStack{
-                //                Button(action: {}, label: {Text("النادي")})
-                //
-                //                Button(action: {}, label: {Text("الاحصائيات")})
+                
                 
             }.padding(.top , 40)
             Spacer()
@@ -29,51 +35,116 @@ struct FC: View {
             }
             Spacer()
             HStack{
-                Image("website")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
-                Image("phone")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
-                Image("email")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
+                ZStack{
+                    Image("website")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    
+                    Button(action: {
+                        self.showingAlert = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(title: Text("Im sorry"), message: Text("you can visit the website by typing al arabi FC in google"), dismissButton: .default(Text("Got it!")))
+                    }
+                    .accentColor(.clear)
+                }
+                ZStack{
+                    Image("phone")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    Button(action: {
+                        self.showingAlerto = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
+                    }
+                    .alert(isPresented: $showingAlerto) {
+                        Alert(title: Text("Im sorry"), message: Text("i dont know the number of alarabi FC"), dismissButton: .default(Text("Got it!")))
+                    }
+                    .accentColor(.clear)
+                }
+                ZStack{
+                    Image("email")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    Button(action: {
+                        self.showingAlertt = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
+                    }
+                    .alert(isPresented: $showingAlertt) {
+                        Alert(title: Text("Im sorry"), message: Text("i dont know alarabi's FC email"), dismissButton: .default(Text("Got it!")))
+                    }
+                    .accentColor(.clear)
+                }
             }
             HStack{
-                Image("instagram")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
-                Image("twitter")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
-                
-                Image("facebook copy")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70)
-                    .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
-                    .padding()
+                ZStack{
+                    Image("instagram")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    Button(action: {
+                        self.showingAlertth = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
+                    }
+                    .alert(isPresented: $showingAlertth) {
+                        Alert(title: Text("Im sorry"), message: Text("you can visit the instagram acount of alarabi's FC by typing https://www.instagram.com/arabi_sc/?hl=en in google"), dismissButton: .default(Text("Got it!")))
+                    }.accentColor(.clear)
+                   
+                }
+                ZStack{
+                    Image("twitter")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    Button(action: {
+                        self.showingAlertf = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n")
+                    }
+                    .alert(isPresented: $showingAlertf) {
+                        Alert(title: Text("Im sorry"), message: Text("you can visit the twitter acount of alarabi's FC by typing https://twitter.com/Alarabi_SC in google"), dismissButton: .default(Text("Got it!")))
+                    }
+                    .accentColor(.clear)
+                }
+                ZStack{
+                    Image("facebook copy")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .shadow(color: Color("Color"), radius: 10, x: 0.0, y: 0.0)
+                        .padding()
+                    Button(action: {
+                        self.showingAlertfi = true
+                    }) {
+                        Text("hiiiiiiiiiiiiiiiiiiiii\n\n\n").accentColor(.clear)
+                    }
+                    .alert(isPresented: $showingAlertfi) {
+                        Alert(title: Text("Im sorry"), message: Text("you can visit the facebook acount of alarabi's FC by typing https://www.facebook.com/alarabiclub/ in google"), dismissButton: .default(Text("Got it!")))
+                    }
+                }
             }
             
             Spacer()
-
+            
             HStack{
-
+                
                 VStack{
                     Image(uiImage: #imageLiteral(resourceName: "calendar"))
                         .resizable()
