@@ -18,7 +18,6 @@
 		976E5B822539D79900490E8C /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976E5B812539D79900490E8C /* player.swift */; };
 		9783128325389195006FBCD6 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783128225389195006FBCD6 /* game.swift */; };
 		978312872538926D006FBCD6 /* GamedetailsVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978312862538926D006FBCD6 /* GamedetailsVew.swift */; };
-		97AB9035253BBE41005EAB66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */; };
 		97E41804253768A30004C292 /* myFinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E41803253768A30004C292 /* myFinalProjectApp.swift */; };
 		97E41808253768A70004C292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E41807253768A70004C292 /* Assets.xcassets */; };
 		97E4180B253768A70004C292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E4180A253768A70004C292 /* Preview Assets.xcassets */; };
@@ -42,7 +41,6 @@
 		976E5B812539D79900490E8C /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		9783128225389195006FBCD6 /* game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		978312862538926D006FBCD6 /* GamedetailsVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamedetailsVew.swift; sourceTree = "<group>"; };
-		97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97E41800253768A30004C292 /* myFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E41803253768A30004C292 /* myFinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFinalProjectApp.swift; sourceTree = "<group>"; };
 		97E41807253768A70004C292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				97E41803253768A30004C292 /* myFinalProjectApp.swift */,
 				97E41807253768A70004C292 /* Assets.xcassets */,
 				97E4180C253768A70004C292 /* Info.plist */,
-				97AB9034253BBE41005EAB66 /* GoogleService-Info.plist */,
 				97E41809253768A70004C292 /* Preview Content */,
 			);
 			path = myFinalProject;
@@ -275,7 +272,6 @@
 			files = (
 				97E4180B253768A70004C292 /* Preview Assets.xcassets in Resources */,
 				97E41808253768A70004C292 /* Assets.xcassets in Resources */,
-				97AB9035253BBE41005EAB66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

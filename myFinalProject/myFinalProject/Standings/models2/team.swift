@@ -8,7 +8,7 @@
 import Foundation
 
 struct Team: Codable, Identifiable {
-    var id = UUID()
+    var id: UUID? = UUID()
     var TN: String
     var S: String
     var MP: String
@@ -17,15 +17,14 @@ struct Team: Codable, Identifiable {
     var L: String
     var PTS: String
 
-    enum CodingKeyss: String, CodingKey{
+    enum CodingKeys: String, CodingKey{
         case TN = "team_name"
         case S = "overall_league_position"
-        case MP = "overall_league_played"
+        case MP = "overall_league_payed"
         case W = "overall_league_W"
         case D = "overall_league_D"
         case L = "overall_league_L"
         case PTS = "overall_league_PTS"
-
     }
 }
 /*

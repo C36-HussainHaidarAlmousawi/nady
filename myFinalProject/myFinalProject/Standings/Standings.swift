@@ -9,32 +9,50 @@ import SwiftUI
 
 struct Standings: View {
     
-    @State var games: [Team] = []
+    @State var teams: [Team] = []
     
     var body: some View {
         NavigationView{
         VStack{
              
-            Form{
+            List{
                     HStack{
+                        Group{
                         Text("الفريق")
                         Spacer()
-                        Text("النقاط      ")
-                        Text("لعب     ")
-                        Text("ف     ")
-                        Text("ت    ")
-                        Text("خ ")
+                        Text("نقاط")
+                        Spacer()
+                        Text("لعب")
+                        Spacer()
+                            Group{
+                        Text("ف")
+                        Spacer()
+                        Text("ت")
+                        Spacer()
+                        Text("خ")
                     }
-                ForEach(games) {item in
+                    }
+                    }
+                ForEach(teams) {item in
                     HStack{
                         Text("\(item.S).")
                         Image(uiImage: UIImage(named: item.TN)!)
-                        Spacer()
-                        Text(item.PTS)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 50)
+                       
+                        HStack{
+                            Spacer()
+                            Text(item.PTS)
+                            Spacer()
                         Text(item.MP)
+                            Spacer()
                         Text(item.W)
+                            Spacer()
                         Text(item.D)
+                        Spacer()
                         Text(item.L)
+                        }
                     }
                 }
             }
@@ -106,27 +124,30 @@ struct Standings: View {
         }.navigationBarHidden(true)
     }
    
+
+
     func loadTeamData() {
         var arrayTeam: [Team] = []
-
+        
         guard let url = URL(string: "https://apiv2.apifootball.com/?action=get_standings&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
         else { return }
-
+        
         URLSession.shared.dataTask(with: url){(data , response , error)  in
-            do{
-                guard let data = data else { return }
-                if let decodedData = try? JSONDecoder().decode([Team].self, from: data) {
-                    DispatchQueue.main.async {
-                        for i in decodedData {
-                            arrayTeam.append(Team(TN: i.TN, S: i.S, MP: i.MP, W: i.W, D: i.D, L: i.L, PTS: i.PTS))
-                            games = arrayTeam
-                        }
+            guard let data = data else { return }
+            
+            do {
+                let decodedData = try JSONDecoder().decode([Team].self, from: data)
+                DispatchQueue.main.async {
+                    for i in decodedData {
+                        arrayTeam.append(Team(TN: i.TN, S: i.S, MP: i.MP, W: i.W, D: i.D, L: i.L, PTS: i.PTS))
+                        teams = arrayTeam
+                        
                     }
-                } else {
-                    print("errorrrrrrrrrrrrr")
                 }
             }
-
+            catch {
+                print("XXXXXX \(error)")
+            }
         }.resume()
     }
 }
