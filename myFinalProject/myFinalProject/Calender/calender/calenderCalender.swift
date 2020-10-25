@@ -128,7 +128,7 @@ struct calenderCalender: View {
         
         var arrayGame : [Gameee] = []
         
-        guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_predictions&from=2000-00-00&to=3020-10-24&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
+        guard let url = URL(string:"https://apiv2.apifootball.com/?action=get_events&from=0000-00-00&to=3020-10-16&league_id=293&APIkey=1a9873166ea217449dfb6aa95a3e235b3cd83cc16507c046fc4cd3ff719c72d3")
         else { return }
         
         URLSession.shared.dataTask(with: url){(data , response, error) in
